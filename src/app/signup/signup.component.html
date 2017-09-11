@@ -1,0 +1,27 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row">
+        <div class="col-md-4 push-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <form (ngSubmit)="onSignup(f)" #f="ngForm">
+                <div class="form-content">
+                    <!-- <div class="form-group">
+                <input type="text" class="form-control input-underline input-lg" id="" placeholder="Full Name">
+            </div> -->
+
+                    <div class="form-group">
+                        <input type="email" class="form-control input-underline input-lg" id="email" name="email" placeholder="Email" ngModel>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" id="password" name="password" placeholder="Password"
+                            ngModel>
+                    </div>
+                    <!-- <div class="form-group">
+                <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repeat Password">
+            </div> -->
+                </div>
+                <button class="btn rounded-btn" [disabled]="!f.valid" (onClick)="onTest()"> Log in </button>
+                <button class="btn rounded-btn" type="submit" [disabled]="!f.valid">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
